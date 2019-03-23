@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Illuminate\Http\Response;
 class MemberMiddleware
 {
     /**
@@ -15,7 +15,7 @@ class MemberMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user() && $request->user()->type != 'member') {
+        if ($request->user() && $request->user()->admin_level != 'member') {
             return new Response(view('unauthorized')->with('role', 'MEMBER'));
         }
         return $next($request);
