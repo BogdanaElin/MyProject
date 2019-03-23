@@ -27,5 +27,4 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function (
 });
 
 
-
 // Route::get('/display1', 'HomeController@display1')->name('display1');
