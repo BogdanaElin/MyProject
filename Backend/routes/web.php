@@ -14,15 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function () {
     Route::match(['get', 'post'], '/adminOnlyPage/', 'HomeController@admin');
 });
+
 Route::group(['middleware' => 'App\Http\Middleware\MemberMiddleware'], function () {
     Route::match(['get', 'post'], '/memberOnlyPage/', 'HomeController@member');
 });
+
 Route::group(['middleware' => 'App\Http\Middleware\SuperAdminMiddleware'], function () {
     Route::match(['get', 'post'], '/superAdminOnlyPage/', 'HomeController@super_admin');
 });
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/display1', 'HomeController@display1')->name('display1');
+
+// Route::get('/display1', 'HomeController@display1')->name('display1');
