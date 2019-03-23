@@ -17,7 +17,7 @@
                     {{-- <a href="{{ url('/display1') }}">display1</a> --}}
 
 
-                    as <strong>{{ strtoupper(Auth::user()->type) }}</strong>
+                    as <strong>{{ strtoupper(Auth::user()->admin_level) }}</strong>
 Admin Page: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a>
 Super Admin Page: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a>
 Member Page: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a>
