@@ -15,15 +15,19 @@
                     @endif
                     You are logged in!
                     {{-- <a href="{{ url('/display1') }}">display1</a> --}}
-                    as <strong>{{ strtoupper(Auth::user()->admin_level) }}</strong><br>
-                    Admin Page: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a><br>
-                    Super Admin Page: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a><br>
-                    Member Page: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a><br>
+                    {{-- as <strong>{{ strtoupper(Auth::user()->admin_level) }}</strong><br>
+                    Admin Page: <a href="{{ url('/') }}/Admin">{{ url('/') }}/adminOnlyPage</a><br>
+                    Super Admin Page: <a href="{{ url('/') }}/SuperAdmin">{{ url('/') }}/super_adminOnlyPage</a><br> --}}
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+@section('footer')
+    <footer>foot</footer>
+@endsection
+
 
 
