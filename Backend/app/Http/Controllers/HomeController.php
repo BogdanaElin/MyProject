@@ -31,11 +31,11 @@ class HomeController extends Controller
     }
     public function admin(Request $req)
     {
-        return view('middleware')->withMessage('Admin');
+        return view('admin')->withMessage('Admin');
     }
     public function super_admin(Request $req)
     {
-        return view('middleware')->withMessage('Super Admin');
+        return view('superadmin')->withMessage('Super Admin');
     }
     public function member(Request $req)
     {

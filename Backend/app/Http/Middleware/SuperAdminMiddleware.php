@@ -15,7 +15,7 @@ class SuperAdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user() && $request->user()->admin_level!= 'super_admin')
+        if ($request->user() && $request->user()->admin_level!= 'SUPERADMIN')
         {
             return new Response(view('unauthorized')->with('role', 'SUPER ADMIN'));
         }   

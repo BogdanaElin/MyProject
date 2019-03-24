@@ -11,7 +11,6 @@
 
         <!-- Styles -->
         <style>
-          
         </style>
     </head>
     <body>
@@ -31,7 +30,15 @@
             @endif
             <div class="content">
                 
+
+
             </div>
+            <div class= "foot">
+
+
+
+
+            </div> 
         </div>
     </body>
 </html>
